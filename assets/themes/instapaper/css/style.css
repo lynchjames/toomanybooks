@@ -87,10 +87,7 @@ a, a:visited {
   text-transform: uppercase;
   font-style: normal;
   line-height: 1.5;
-}
-
-.article_details_left a {
-  margin-left: 0.35em;
+  margin-right: 0.35em;
 }
 
 .article_details ul {
@@ -100,4 +97,5 @@ a, a:visited {
 
 .article_details ul li {
   float: left;
+  margin-right: 0.35em;
 }
