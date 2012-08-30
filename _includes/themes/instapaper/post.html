@@ -1,5 +1,24 @@
 <article>
     <h1 class="post-title">{{ page.title }} <small>{{ page.tagline }}</small></h1>
+    <div class="article_details clearfix">
+	    <div class="article_details_left">
+		    <div>
+			    <span class="field_name">CATEGORY:</span><a href="/categories.html#{{ page.category }}-ref">{{ page.category }}</a>
+		    </div>
+		    <div>
+			    <span class="field_name">TAGS:</span>
+			    <ul>
+				    {% assign tags_list = page.tags %}
+				    {% include JB/tags_list %}
+			    </ul>
+		    </div>
+	    </div>
+	    <div class="article_details_right">
+		    <div><span class="field_name">PUBLISHED:</span>{{ page.date | date_to_long_string }}</div>
+		    {% capture word_count %}{{ page.content | number_of_words }}{% endcapture %}
+		    <div><span class="field_name">LENGTH:</span> {{ word_count | divide: 250 }} minutes ({{ page.content | number_of_words }} words)</div>
+	    </div>
+    </div>
     {{ content }}
     <hr>
     <div class="pagination">
