@@ -1,0 +1,9 @@
+.article_details_left {
+  float: left;
+  width: 60%;
+}
+
+.article_details_right {
+  float: right;
+  width: 40%;
+}

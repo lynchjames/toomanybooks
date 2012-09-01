@@ -75,10 +75,13 @@ a, a:visited {
   padding-bottom: 10px; 
 }
 
-.article_details .article_details_left, div.article_details .article_details_right {
-  float: left;
+.article_details .article_details_left, .article_details .article_details_right {
   line-height: 1.5;
-  width: 50%;
+}
+
+.article_details_left > div, .article_details_right > div {
+  float: left;
+  width: 100%;
 }
 
 .article_details span.field_name {
@@ -87,7 +90,7 @@ a, a:visited {
   text-transform: uppercase;
   font-style: normal;
   line-height: 1.5;
-  margin-right: 0.35em;
+  margin-right: 0.15em;
 }
 
 .article_details ul {
