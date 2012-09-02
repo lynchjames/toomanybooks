@@ -33,7 +33,7 @@
   -->
   </head>
 
-  <body class="container">
+  <body>
 
     <div class="navbar">
       <div class="navbar-inner">
@@ -46,16 +46,20 @@
           </ul>
         </div>
       </div>
+      <div class="bookmark"></div>
     </div>
 
+    <div class="container">
       {{ content }}
 
       <footer>
-        <p>&copy; {{ site.author.name }} 2012 
+        <!-- <p>&copy; {{ site.author.name }} 2012 
           with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
           and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
-        </p>
+	  </p> -->
       </footer>
+
+    </div>
 
 
     {% include JB/analytics %}

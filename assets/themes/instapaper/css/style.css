@@ -18,6 +18,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 */
 body {
   font-family: 'Merriweather', serif;
+  padding: 0;
 }
 header {
   margin: 1em 0;
@@ -32,12 +33,17 @@ h1 {
   font-size: 3.0em;
   font-weight: normal;
 }
-h1.post-title a {
-  color: #000;
+
+a, a:visited {
+  color: #9F111B;
 }
-h1.post-title a:hover {
+
+a:hover {
   color: #005580;
-  text-decoration: underline;
+}
+.post-title a, .post-title a:hover {
+  color: #333;
+  text-decoration: none;
 }
 h2 {
   font-size: 2em;
@@ -50,15 +56,57 @@ h1,h2,h3 {
   font-weight: normal;
   line-height: 1.2em;
 }
+small {
+  display: block;
+}
 p {
   font-size: 1.1em;
   line-height: 1.8em;
   margin: 1.3em 0;
 }
 
-a, a:visited {
-  color: black;
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
 }
+
+article {
+  border-bottom: none;
+  margin-bottom: 50px;
+}
+
+.navbar-inner {
+  background-color: #B11623;
+  background-image: none;
+  min-height: 80px;
+}
+
+.navbar .container {
+  padding-top: 20px;
+}
+
+.navbar .brand {
+  font-size: 30px;
+}
+
+.navbar .brand, .navbar .nav > li > a { 
+  color: #fff;
+}
+
+.navbar .nav .active > a, .navbar .nav .active > a:hover {
+  background-color: #B11623;
+}
+
+/*.navbar .bookmark {
+  border-top: 40px solid transparent;
+  border-bottom: 40px solid transparent; 
+  border-right:40px solid #fff; 
+  height: 0; 
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 0; 
+}*/
 
 #nav-below {
   margin: 1.3em 0;
@@ -101,4 +149,15 @@ a, a:visited {
 .article_details ul li {
   float: left;
   margin-right: 0.35em;
+}
+
+.pagination {
+  height: 18px;
+}	
+
+.pagination a, .pagination a:hover, .pagination .active a {
+  background-color: #fff;
+  border: none;
+  font-size: 14px;
+  line-height: 18px;
 }
