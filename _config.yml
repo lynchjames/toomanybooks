@@ -28,7 +28,7 @@ author :
 #
 production_url : http://toomanybooks.jlyn.ch
 
-safe: true
+#safe: true
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
