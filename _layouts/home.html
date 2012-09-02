@@ -6,8 +6,8 @@ layout: default
 <h2 class="post-title"><a href="{{ BASE_PATH }}{{post.url}}">{{ post.title }}</a> <small>{{ post.tagline }}</small></h2>
 	{% assign post = post %}
 	{% capture truncated_html %}
-	{% capture more_link %}<a href="{{ post.url}}">more...</a>{% endcapture %}
-	{{ post.content | truncatehtml: 500, more_link }}
+	{% capture more_link %}<a href="{{ post.url}}">more</a>{% endcapture %}
+	{{ post.content | truncatehtml: 500, more_link, "..." }}
 	{% endcapture %}
 	{% assign post_content = truncated_html %}
 	{% include themes/instapaper/post_data %}

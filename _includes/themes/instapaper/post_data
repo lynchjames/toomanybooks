@@ -16,7 +16,7 @@
 	    <div class="article_details_right">
 		    <div><span class="field_name">Published:</span>{{ post.date | date_to_long_string }}</div>
 		    {% capture word_count %}{{ post.content | number_of_words }}{% endcapture %}
-		    <div><span class="field_name">Length:</span> {{ word_count | divide: 250 }} minutes ({{ word_count }})</div>
+		    <div><span class="field_name">Length:</span> {{ word_count | divide: 250 }} minutes ({{ word_count }} words)</div>
 	    </div>
     </div>
     {{ post_content }}
