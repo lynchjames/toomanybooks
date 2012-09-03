@@ -19,6 +19,8 @@
       </ul>
     </div>
     <hr>
-    {% include JB/comments %}
+    {% unless post.categories == empty %}
+    	{% include JB/comments %}
+    {% endunless %}
   
 </article>

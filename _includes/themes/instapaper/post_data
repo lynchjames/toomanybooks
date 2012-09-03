@@ -1,11 +1,13 @@
     <div class="article_details clearfix">
 	    <div class="article_details_left">
+		{% unless post.categories == empty %}
 		    <div>
 			    <span class="field_name">Category:</span><a href="/categories.html#{{ post.category }}-ref">{{ post.category }}</a>
 		    </div>
+		{% endunless %}
 		    <div>
 			    <span class="field_name">Tags:</span>
-  				{% unless page.tags == empty %}
+  				{% unless post.tags == empty %}
 			    		<ul>
 				    		{% assign tags_list = post.tags %}
 				    		{% include JB/tags_list %}
@@ -15,8 +17,16 @@
 	    </div>
 	    <div class="article_details_right">
 		    <div><span class="field_name">Published:</span>{{ post.date | date_to_long_string }}</div>
-		    {% capture word_count %}{{ post.content | number_of_words }}{% endcapture %}
-		    <div><span class="field_name">Length:</span> {{ word_count | divide: 250 }} minutes ({{ word_count }} words)</div>
+		    {% assign word_count = post.content | number_of_words %}
+		    {% assign minutes = word_count | divide : 250 %}
+		    {% if minutes == "1" %}
+			{% assign plural = "" %}
+		    {% else %}
+			{% assign plural = "s" %}
+		    {% endif %}
+		{% unless word_count < 250 %}
+		    <div><span class="field_name">Length:</span> {{ minutes }} minute{{ plural }} ({{ word_count }} words)</div>
+		{% endunless %}
 	    </div>
     </div>
     {{ post_content }}

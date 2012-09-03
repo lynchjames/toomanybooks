@@ -161,3 +161,9 @@ article {
   font-size: 14px;
   line-height: 18px;
 }
+
+iframe {
+  margin: 1.3em 0;
+  max-width: 724px;
+  width: 100%;
+}
